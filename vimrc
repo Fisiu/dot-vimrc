@@ -11,7 +11,7 @@ endif
 
 let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
 
-let g:vim_bootstrap_langs = "html,javascript"
+let g:vim_bootstrap_langs = "html,javascript,python"
 let g:vim_bootstrap_editor = "vim"              " nvim or vim
 
 if !filereadable(neobundle_readme)
@@ -89,6 +89,10 @@ NeoBundle 'mattn/emmet-vim'
 
 "" Javascript bundle
 NeoBundle 'scrooloose/syntastic'
+
+"" Python bundle
+NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'Yggdroot/indentLine'
 
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
@@ -429,6 +433,26 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers=['python', 'flake8']
+let g:syntastic_python_flake8_post_args='--ignore=W391'
+
+" vim-python
+augroup vimrc-python
+  autocmd!
+  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
+      \ formatoptions+=croq softtabstop=4 smartindent
+      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+augroup END
+
+" jedi-vim
+let g:jedi#popup_on_dot = 0
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = "<leader>d"
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#rename_command = "<leader>r"
+let g:jedi#show_call_signatures = "0"
+let g:jedi#completions_command = "<C-Space>"
 
 "" Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
