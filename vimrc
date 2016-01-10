@@ -11,7 +11,7 @@ endif
 
 let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
 
-let g:vim_bootstrap_langs = ""
+let g:vim_bootstrap_langs = "javascript"
 let g:vim_bootstrap_editor = "vim"              " nvim or vim
 
 if !filereadable(neobundle_readme)
@@ -80,6 +80,8 @@ NeoBundle 'sherzberg/vim-bootstrap-updater'
 
 "" Custom bundles
 
+"" Javascript bundle
+NeoBundle 'scrooloose/syntastic'
 
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
@@ -409,6 +411,17 @@ noremap ,o :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=lin
 
 "" Custom configs
 
+"" Javascript config
+let g:javascript_enable_domhtmlcss = 1
+
+"" syntastic options
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 "" Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
