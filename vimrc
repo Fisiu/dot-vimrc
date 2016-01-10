@@ -11,7 +11,7 @@ endif
 
 let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
 
-let g:vim_bootstrap_langs = "javascript"
+let g:vim_bootstrap_langs = "html,javascript"
 let g:vim_bootstrap_editor = "vim"              " nvim or vim
 
 if !filereadable(neobundle_readme)
@@ -79,6 +79,13 @@ NeoBundle 'jonathanfilip/vim-lucius'
 NeoBundle 'sherzberg/vim-bootstrap-updater'
 
 "" Custom bundles
+
+"" Html bundle
+NeoBundle 'amirh/HTML-AutoCloseTag'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'gorodinskiy/vim-coloresque'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'mattn/emmet-vim'
 
 "" Javascript bundle
 NeoBundle 'scrooloose/syntastic'
