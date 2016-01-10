@@ -22,7 +22,7 @@ if !filereadable(neobundle_readme)
   let g:not_finsh_neobundle = "yes"
 
   " Run shell script if exist on custom select language
-  
+
 endif
 
 " Required:
@@ -35,47 +35,48 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "*****************************************************************************
 "" NeoBundle install packages
 "*****************************************************************************
-"NeoBundle 'scrooloose/nerdtree'
-"NeoBundle 'tpope/vim-commentary'
-"NeoBundle 'tpope/vim-fugitive'
-"NeoBundle 'ctrlpvim/ctrlp.vim'
-"NeoBundle 'bling/vim-airline'
-"NeoBundle 'airblade/vim-gitgutter'
-"NeoBundle 'sheerun/vim-polyglot'
-"NeoBundle 'vim-scripts/grep.vim'
-"NeoBundle 'vim-scripts/CSApprox'
-"NeoBundle 'bronson/vim-trailing-whitespace'
-"NeoBundle 'jiangmiao/auto-pairs'
-"NeoBundle 'Shougo/vimproc.vim', {
-"      \ 'build' : {
-"      \     'windows' : 'tools\\update-dll-mingw',
-"      \     'cygwin' : 'make -f make_cygwin.mak',
-"      \     'mac' : 'make -f make_mac.mak',
-"      \     'unix' : 'make -f make_unix.mak',
-"      \    },
-"      \ }
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'sheerun/vim-polyglot'
+NeoBundle 'vim-scripts/grep.vim'
+NeoBundle 'vim-scripts/CSApprox'
+NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'Shougo/vimproc.vim', {
+      \ 'build' : {
+      \     'windows' : 'tools\\update-dll-mingw',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
 
 "" Vim-Session
-"NeoBundle 'xolox/vim-misc'
-"NeoBundle 'xolox/vim-session'
+NeoBundle 'xolox/vim-misc'
+NeoBundle 'xolox/vim-session'
 
 if v:version >= 703
-"  NeoBundle 'Shougo/vimshell.vim'
+  NeoBundle 'Shougo/vimshell.vim'
 endif
 
 if v:version >= 704
   "" Snippets
-"  NeoBundle 'SirVer/ultisnips'
-"  NeoBundle 'FelikZ/ctrlp-py-matcher'
+  NeoBundle 'SirVer/ultisnips'
+  NeoBundle 'FelikZ/ctrlp-py-matcher'
 endif
 
-"NeoBundle 'honza/vim-snippets'
+NeoBundle 'honza/vim-snippets'
 
 "" Color
-"NeoBundle 'tomasr/molokai'
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'jonathanfilip/vim-lucius'
 
 "" Vim-Bootstrap Updater
-"NeoBundle 'sherzberg/vim-bootstrap-updater'
+NeoBundle 'sherzberg/vim-bootstrap-updater'
 
 "" Custom bundles
 
@@ -151,7 +152,9 @@ set number
 
 let no_buffers_menu=1
 if !exists('g:not_finsh_neobundle')
-"  colorscheme molokai
+	set background=dark
+	let g:hybrid_custom_term_colors = 1
+  colorscheme hybrid
 endif
 
 set mousemodel=popup
