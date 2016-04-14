@@ -91,11 +91,10 @@ NeoBundle 'tpope/vim-haml'
 NeoBundle 'mattn/emmet-vim'
 
 "" Javascript bundle
-NeoBundle 'scrooloose/syntastic'
+NeoBundle 'jelera/vim-javascript-syntax'
 
 "" Python bundle
 NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'Yggdroot/indentLine'
 
 "" PHP Bundle
 NeoBundle 'arnaud-lb/vim-php-namespace'
@@ -447,8 +446,13 @@ noremap ,o :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=lin
 
 "" Custom configs
 
-"" Javascript config
 let g:javascript_enable_domhtmlcss = 1
+
+" vim-javascript
+augroup vimrc-javascript
+  autocmd!
+  autocmd FileType javascript set tabstop=4|set shiftwidth=4|set expandtab softtabstop=4 smartindent
+augroup END
 
 "" syntastic options
 set statusline+=%#warningmsg#
@@ -478,6 +482,10 @@ let g:jedi#usages_command = "<leader>n"
 let g:jedi#rename_command = "<leader>r"
 let g:jedi#show_call_signatures = "0"
 let g:jedi#completions_command = "<C-Space>"
+let g:jedi#smart_auto_mappings = 0
+
+" vim-airline
+let g:airline#extensions#virtualenv#enabled = 1
 
 "" Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
