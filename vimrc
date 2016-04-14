@@ -10,7 +10,7 @@ endif
 
 let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
 
-let g:vim_bootstrap_langs = "html,javascript,python"
+let g:vim_bootstrap_langs = "html,javascript,python,php"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
 
 if !filereadable(neobundle_readme)
@@ -96,6 +96,9 @@ NeoBundle 'scrooloose/syntastic'
 "" Python bundle
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'Yggdroot/indentLine'
+
+"" PHP Bundle
+NeoBundle 'arnaud-lb/vim-php-namespace'
 
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
