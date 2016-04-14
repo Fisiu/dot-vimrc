@@ -169,7 +169,7 @@ set number
 let no_buffers_menu=1
 if !exists('g:not_finsh_neobundle')
 	set background=dark
-	let g:hybrid_custom_term_colors = 1
+	let g:hybrid_custom_term_colors = 0
 	colorscheme hybrid
 endif
 
