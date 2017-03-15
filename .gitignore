@@ -6,6 +6,7 @@ Session.vim
 .netrwhist
 *~
 
-# don't checkin bundle dir, it's managed by neobundle
-bundle
+# don't checkin autoload and plug
+autoload
+plugged
 
