@@ -118,7 +118,6 @@ filetype plugin indent on
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
-set bomb
 set ttyfast
 
 "" Fix backspace indent
