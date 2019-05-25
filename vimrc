@@ -91,6 +91,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 Plug 'ludwig/split-manpage.vim'
 
+" go
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " html
 "" HTML Bundle
