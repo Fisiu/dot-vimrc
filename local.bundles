@@ -1,0 +1,4 @@
+" User defined bundles
+
+" EditorConfig
+Plug 'editorconfig/editorconfig-vim'

@@ -1,0 +1,14 @@
+"" User settings
+
+" Directories for swp files
+set nobackup
+set noswapfile
+
+" Custom settings
+set cursorline
+
+" Colors
+set background=dark
+let g:hybrid_custom_term_colors = 1
+colorscheme hybrid
+
