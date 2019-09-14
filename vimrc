@@ -66,8 +66,6 @@ Plug 'honza/vim-snippets'
 
 "" Color
 Plug 'tomasr/molokai'
-Plug 'w0ng/vim-hybrid'
-Plug 'jonathanfilip/vim-lucius'
 
 "*****************************************************************************
 "" Custom bundles

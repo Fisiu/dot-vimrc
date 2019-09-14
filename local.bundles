@@ -1,4 +1,11 @@
 " User defined bundles
 
+
+" Colors
+Plug 'w0ng/vim-hybrid'
+Plug 'jonathanfilip/vim-lucius'
+
+
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'
+
