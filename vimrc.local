@@ -1,5 +1,8 @@
 "" User settings
 
+" load polyglot here, to accept all settings from main config
+Plug 'sheerun/vim-polyglot'
+
 " Directories for swp files
 set nobackup
 set noswapfile
