@@ -9,3 +9,6 @@ Plug 'jonathanfilip/vim-lucius'
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'
 
+" Devicons
+Plug 'ryanoasis/vim-devicons'
+
