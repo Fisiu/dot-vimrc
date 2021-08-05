@@ -1,4 +1,5 @@
 "" User settings
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " load polyglot here, to accept all settings from main config
 Plug 'sheerun/vim-polyglot'
@@ -15,4 +16,7 @@ set cursorline
 let g:vim_bootstrap_theme = "hybrid"
 let g:hybrid_custom_term_colors = 1
 colorscheme hybrid
+
+" systemd syntax
+Plug 'Matt-Deacalion/vim-systemd-syntax'
 
