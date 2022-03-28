@@ -20,3 +20,6 @@ colorscheme hybrid
 " systemd syntax
 Plug 'Matt-Deacalion/vim-systemd-syntax'
 
+" Qt qml
+Plug 'peterhoeg/vim-qml'
+
