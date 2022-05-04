@@ -8,6 +8,9 @@ set noswapfile
 " Custom settings
 set cursorline
 
+" Colors
+set background=dark
+
 " systemd syntax
 Plug 'Matt-Deacalion/vim-systemd-syntax'
 
