@@ -1,4 +1,4 @@
-" vim-bootstrap 2022-03-28 20:31:34
+" vim-bootstrap 2024-01-06 01:04:26
 
 "*****************************************************************************
 "" Vim-Plug core
@@ -10,10 +10,10 @@ else
   let curl_exists=expand('curl')
 endif
 
-let g:vim_bootstrap_langs = "c,go,html,javascript,php,python,rust"
+let g:vim_bootstrap_langs = "c,go,html,javascript,lua,php,python,rust"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
 let g:vim_bootstrap_theme = "gruvbox"
-let g:vim_bootstrap_frams = ""
+let g:vim_bootstrap_frams = "vuejs"
 
 if !filereadable(vimplug_exists)
   if !executable(curl_exists)
@@ -48,7 +48,7 @@ Plug 'majutsushi/tagbar'
 Plug 'dense-analysis/ale'
 Plug 'Yggdroot/indentLine'
 Plug 'editor-bootstrap/vim-bootstrap-updater'
-Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
+Plug 'tpope/vim-rhubarb' " required by fugitive to :GBrowse
 Plug 'morhetz/gruvbox'
 
 if isdirectory('/usr/local/opt/fzf')
@@ -98,10 +98,17 @@ Plug 'mattn/emmet-vim'
 Plug 'jelera/vim-javascript-syntax'
 
 
+" lua
+"" Lua Bundle
+Plug 'xolox/vim-lua-ftplugin'
+Plug 'xolox/vim-lua-inspect'
+
+
 " php
 "" PHP Bundle
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
 Plug 'stephpy/vim-php-cs-fixer'
+
 
 " python
 "" Python Bundle
@@ -127,6 +134,17 @@ Plug 'prabirshrestha/asyncomplete.vim'
 
 " Asyncomplete lsp.vim
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+
+" typescript
+Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
+
+
+" vuejs
+Plug 'posva/vim-vue'
+Plug 'leafOfTree/vim-vue-plugin'
+
 
 
 "*****************************************************************************
@@ -218,7 +236,7 @@ else
 
   " IndentLine
   let g:indentLine_enabled = 1
-  let g:indentLine_concealcursor = "inc"
+  let g:indentLine_concealcursor = ''
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
 
@@ -482,7 +500,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 "" Open current line on GitHub
-nnoremap <Leader>o :.Gbrowse<CR>
+nnoremap <Leader>o :.GBrowse<CR>
 
 "*****************************************************************************
 "" Custom configs
@@ -575,6 +593,8 @@ augroup vimrc-javascript
   autocmd FileType javascript setl tabstop=4|setl shiftwidth=4|setl expandtab softtabstop=4
 augroup END
 
+" lua
+
 
 " php
 " Phpactor plugin
@@ -641,6 +661,15 @@ au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
+
+" typescript
+let g:yats_host_keyword = 1
+
+" vuejs
+" vim vue
+let g:vue_disable_pre_processors=1
+" vim vue plugin
+let g:vim_vue_plugin_load_full_syntax = 1
 
 
 "*****************************************************************************
