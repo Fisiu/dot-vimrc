@@ -1,4 +1,4 @@
-" vim-bootstrap 2024-01-06 01:04:26
+" vim-bootstrap 2024-08-21 20:37:03
 
 "*****************************************************************************
 "" Vim-Plug core
@@ -10,7 +10,7 @@ else
   let curl_exists=expand('curl')
 endif
 
-let g:vim_bootstrap_langs = "c,go,html,javascript,lua,php,python,rust"
+let g:vim_bootstrap_langs = "c,go,html,javascript,lua,php,python,rust,typescript"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
 let g:vim_bootstrap_theme = "gruvbox"
 let g:vim_bootstrap_frams = "vuejs"
@@ -593,6 +593,7 @@ augroup vimrc-javascript
   autocmd FileType javascript setl tabstop=4|setl shiftwidth=4|setl expandtab softtabstop=4
 augroup END
 
+
 " lua
 
 
@@ -664,6 +665,8 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 " typescript
 let g:yats_host_keyword = 1
+
+
 
 " vuejs
 " vim vue
